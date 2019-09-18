@@ -1,0 +1,73 @@
+\documentclass{article}
+
+% formato
+\usepackage[margin = 1.5cm, letterpaper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}% http://ctan.org/pkg/graphicx
+\usepackage{array}
+\usepackage[table,xcdraw]{xcolor}
+
+% árboles de dereivación
+\usepackage{ebproof}
+
+% autómatas
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
+
+%formato ecuaciones
+\usepackage{amsmath}
+
+% símbolos
+\usepackage{amssymb}
+
+% manejo de tablas
+\usepackage{float}
+
+\begin{document}
+    \title{
+        Lenguajes de Programación \\
+        Ejercicio Semanal 6
+    }
+
+    \author{
+        Sandra del Mar Soto Corderi \\
+        Edgar Quiroz Castañeda
+    }
+
+    \date{
+        20 de septiembre del 2019
+    }
+    
+    \maketitle
+
+    \begin{enumerate}
+        \item {
+            Utilizando el operador de punto fijo $Y =_{def} \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$ responde los siguientes incisos.
+            
+            \begin{enumerate}
+            %a)
+           
+            	\item {
+            	Define las funciones exponenciación de naturales \texttt{exp} y reversa de listas \texttt{rev}.\\       	
+        		
+        		}
+        	
+        	%b)
+        	\item {
+        		Encuentra la forma normal de las expresiones:
+        		
+        		\begin{itemize}
+        			\item {
+        			 \texttt{exp 2 2}
+        			 
+        			}
+        		
+        			\item {
+        			\texttt{rev (cons 1 (cons 2 (cons 3 (cons 4 nil))))}
+        			}
+        		\end{itemize}
+    		}
+    	 \end{enumerate}
+        }
+    \end{enumerate}
+\end{document}
