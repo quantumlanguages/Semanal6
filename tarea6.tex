@@ -42,13 +42,38 @@
 
     \begin{enumerate}
         \item {
-            Utilizando el operador de punto fijo $Y =_{def} \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$ responde los siguientes incisos.
+            Utilizando el operador de punto fijo 
+            $Y =_{def} \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$ responde 
+            los siguientes incisos.
             
             \begin{enumerate}
             %a)
            
             	\item {
-            	Define las funciones exponenciación de naturales \texttt{exp} y reversa de listas \texttt{rev}.\\       	
+                    Define las funciones exponenciación de naturales \texttt{exp}
+                    y reversa de listas \texttt{rev}.
+                    
+                    El cuerpo de la primera función sería algo como
+                    \[
+                        exp' := \lambda exp. \lambda x. \lambda y. 
+                        if (iszero \ y) then \ 1 \ else \ x (exp \ x (pred \ y))
+                    \]
+
+                    Que con el operador $Y$ quedaría como $Y exp'$
+
+                    Para la reversa, se podría definir como sigue
+
+                     \[
+                         rev ' := \lambda rev. \lambda lr. \lambda l.
+                         if (isnil \ l) \ then \ rl \ else \ (rev \ (cons \ (head \ l) \ rl)
+                         \ (tail \ l) \ 
+                         )
+                     \]
+
+                    Que es una funciónde recursiónde cola, donde $rl$ es el
+                    acumulador que guarda parcialmente la lista bloqueada.
+
+                    Entonces la función final sería $Y(rev ' \ nil)$
         		
         		}
         	
